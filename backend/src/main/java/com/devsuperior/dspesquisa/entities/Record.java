@@ -2,6 +2,7 @@ package com.devsuperior.dspesquisa.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.Optional;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -64,8 +65,8 @@ public class Record implements Serializable {
         return game;
     }
 
-    public void setGame(Game game) {
-        this.game = game;
+    public void setGame(Game game2) {
+        this.game = game2;
     }
 
     public Record() {
@@ -103,5 +104,8 @@ public class Record implements Serializable {
         } else if (!id.equals(other.id))
             return false;
         return true;
+    }
+
+    public void setGame(Optional<Game> game2) {
     }
 }
